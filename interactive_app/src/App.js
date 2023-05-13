@@ -119,8 +119,10 @@ function App() {
     console.log("carbs", carbs)
     console.log("country Found", countryFound)
     handleShow();
-    
-
+    if (isMounted.current >= 2) {
+      console.log("MOUNTED2", isMounted.current)
+      handleShow2();
+    }
 
   }
   
@@ -132,7 +134,8 @@ function App() {
     // console.log("carbs", carbs)
     console.log("RENDER 1")
     console.log("MOUNTED", isMounted.current)
-    if (isMounted.current > 2) {
+    if (isMounted.current >= 2) {
+      console.log("MOUNTED2", isMounted.current)
       handleShow2();
       setCountryFound(true)
     } else {
