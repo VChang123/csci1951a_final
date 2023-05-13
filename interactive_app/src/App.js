@@ -72,11 +72,11 @@ function App() {
           console.log("key and year are equal", key, year)
           // console.log("other country:", CountryData[key])
           for (let key2 in CountryData[key]){
-            console.log("key2:", key2)
+            // console.log("key2:", key2)
             if(key2 === country.toLowerCase()){
 
               setCountryFound(true)
-              console.log("country Found", countryFound)
+              
 
               console.log("country and key2 are equal", CountryData[key][key2])
               let country_list = CountryData[key][key2]["other_countries"]
@@ -99,7 +99,7 @@ function App() {
               carb_p = carb_p.toFixed(2)
               carb_p = carb_p.toString() + "%"
               setCarbs(carb_p)
-              
+              console.log("country Found", countryFound)
               break
             }
 
@@ -117,11 +117,12 @@ function App() {
     console.log("fat:", fat)
     console.log("protein:", protein)
     console.log("carbs", carbs)
-    console.log("country Found", countryFound)
+    console.log("country Found2", countryFound)
     handleShow();
-    if (isMounted.current >= 2) {
+    if (isMounted.current === 1) {
       console.log("MOUNTED2", isMounted.current)
       handleShow2();
+      isMounted.current += 1;
     }
 
   }
@@ -134,10 +135,12 @@ function App() {
     // console.log("carbs", carbs)
     console.log("RENDER 1")
     console.log("MOUNTED", isMounted.current)
-    if (isMounted.current >= 2) {
+    if (isMounted.current >= 1) {
       console.log("MOUNTED2", isMounted.current)
+      console.log("COUNTRY FOUND2", countryFound)
       handleShow2();
       setCountryFound(true)
+      isMounted.current += 1;
     } else {
       isMounted.current += 1;
     }
