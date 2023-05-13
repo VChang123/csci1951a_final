@@ -35,7 +35,7 @@ p {
   margin-left: 3%;
   padding-bottom: 3%;
   flex-wrap: wrap;
-  padding-top: 3%;
+  padding-top: 2%;
 
 }
 .child {
@@ -51,7 +51,9 @@ p {
   margin-top: 2%;
   margin-left: 1%;
 }
-
+.subtitle {
+  text-align: center;
+}
 
 Form {
   margin-left: 4%;

@@ -152,7 +152,8 @@ function App() {
 
   return (
     <div className="App">
-      <h1>ʕ •ᴥ• ʔʕ •ᴥ• ʔ THE NOURISHING FOUR ʕ •ᴥ• ʔʕ •ᴥ• ʔ</h1>
+      <h1>Nutrional Profiles of Countries Around the World</h1>
+      <p className='subtitle'>ʕ •ᴥ• ʔʕ •ᴥ• ʔ The Nourishing Four ʕ •ᴥ• ʔʕ •ᴥ• ʔ </p>
       <div className="parentDiv">
         <div className="child">
           <p className="headers"><b>TYPE IN A COUNTRY AND YEAR</b></p>
